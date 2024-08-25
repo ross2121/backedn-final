@@ -27,7 +27,7 @@ const corsconfig = {
 };
 app.use(cors(corsconfig));
 app.use(cors({
-    origin: 'http://localhost:3000', // Adjust this as needed
+    origin: 'http://localhost:3000', 
     credentials: true
 }));
 app.use(session({
@@ -37,7 +37,7 @@ app.use(session({
     // store:sessionStorage,
     cookie: { secure: process.env.NODE_ENV === 'production' }, // Use secure cookies in production
 }));
-
+ 
 // Routes
 app.use("/api/customer", customerroutes);
 app.use("/api/cinema", cinemaroute);
